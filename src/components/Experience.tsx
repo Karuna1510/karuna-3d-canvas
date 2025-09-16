@@ -17,9 +17,9 @@ const experiences = [
   },
   {
     company: 'EXL Service',
-    position: 'Full Stack Developer',
+    position: 'Senior Software Developer',
     period: '2023 – 2024',
-    location: 'Noida, India',
+    location: 'Gurugram, India',
     projects: [
       'Generative AI solutions for enterprise clients',
       'Full-stack applications with React & Python backend',
