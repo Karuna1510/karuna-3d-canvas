@@ -122,20 +122,6 @@ export default function Projects() {
                     ))}
                   </div>
                 </div>
-
-                {/* Action Buttons */}
-                <div className="flex gap-3 mt-auto">
-                  <Button 
-                    size="sm" 
-                    className={`
-                      flex-1 bg-gradient-to-r ${project.gradient} hover:opacity-90 
-                      border-0 text-white
-                    `}
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    View Details
-                  </Button>
-                </div>
               </div>
             </motion.div>
           ))}
