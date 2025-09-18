@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Hero3D from './Hero3D';
+import ProfilePolaroid from './ProfilePolaroid';
 
 export default function Hero() {
   return (
@@ -9,47 +10,59 @@ export default function Hero() {
       <Hero3D />
       
       <div className="container-custom section-padding relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
-          >
-            <motion.h1 
-              className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-primary bg-clip-text text-transparent"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Profile Polaroid */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex justify-center lg:justify-end"
             >
-              Karuna Guglani
-            </motion.h1>
-            
-            <motion.div 
-              className="text-xl md:text-2xl lg:text-3xl font-light text-muted-foreground"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <span className="text-primary font-medium">Frontend Developer</span> | 
-              <span className="text-secondary font-medium"> Software Engineer</span>
+              <ProfilePolaroid />
             </motion.div>
-            
-            <motion.p 
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              7+ years of experience building scalable applications and crafting exceptional user experiences
-            </motion.p>
-            
-            <motion.div 
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8"
-              initial={{ opacity: 0, y: 20 }}
+
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6 text-center lg:text-left"
             >
+              <motion.h1 
+                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                Karuna Guglani
+              </motion.h1>
+              
+              <motion.div 
+                className="text-lg md:text-xl lg:text-2xl font-light text-muted-foreground"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <span className="text-primary font-medium">Frontend Developer</span> | 
+                <span className="text-secondary font-medium"> Software Engineer</span>
+              </motion.div>
+              
+              <motion.p 
+                className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                7+ years of experience building scalable applications and crafting exceptional user experiences. Passionate about creating beautiful, functional, and user-centered digital solutions.
+              </motion.p>
+              
+              <motion.div 
+                className="flex flex-col sm:flex-row items-center lg:items-start lg:justify-start justify-center gap-4 pt-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >
               <Button 
                 variant="cyber"
                 size="lg" 
@@ -90,7 +103,8 @@ export default function Hero() {
                 </Button>
               </div>
             </motion.div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
       
