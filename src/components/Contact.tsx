@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useState } from 'react';
+import ChatWidget from './ChatWidget';
 
 const contactInfo = [
   {
@@ -52,7 +53,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section-padding bg-gradient-to-b from-background to-cyber-darker">
+    <section id="contact" className="section-padding bg-gradient-to-b from-background to-cyber-darker relative">
+      <ChatWidget />
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
