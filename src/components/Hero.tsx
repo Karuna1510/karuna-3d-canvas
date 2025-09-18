@@ -10,30 +10,30 @@ export default function Hero() {
       <Hero3D />
       
       <div className="container-custom section-padding relative z-10">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
             {/* Profile Polaroid */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex justify-center lg:justify-end"
+              className="flex justify-center"
             >
               <ProfilePolaroid />
             </motion.div>
 
             {/* Text Content */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6 text-center lg:text-left"
-            >
+            <div className="space-y-6">
               <motion.h1 
                 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
+                transition={{ duration: 1, delay: 0.4 }}
               >
                 Karuna Guglani
               </motion.h1>
@@ -42,27 +42,28 @@ export default function Hero() {
                 className="text-lg md:text-xl lg:text-2xl font-light text-muted-foreground"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <span className="text-primary font-medium">Frontend Developer</span> | 
                 <span className="text-secondary font-medium"> Software Engineer</span>
               </motion.div>
               
               <motion.p 
-                className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed"
+                className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
               >
                 7+ years of experience building scalable applications and crafting exceptional user experiences. Passionate about creating beautiful, functional, and user-centered digital solutions.
               </motion.p>
-              
-              <motion.div 
-                className="flex flex-col sm:flex-row items-center lg:items-start lg:justify-start justify-center gap-4 pt-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
+            </div>
+            
+            <motion.div 
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+            >
               <Button 
                 variant="cyber"
                 size="lg" 
@@ -103,8 +104,7 @@ export default function Hero() {
                 </Button>
               </div>
             </motion.div>
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
       </div>
       
