@@ -5,45 +5,63 @@ import { Button } from '@/components/ui/button';
 const projects = [
   {
     title: 'Marketing CoPilot SDK',
-    description: 'Lightweight SDK built with Rollup and Shadow DOM integration, enabling AI-powered marketing dashboards with seamless embedding capabilities.',
-    tech: ['TypeScript', 'Rollup', 'Shadow DOM', 'AI Integration', 'SDK Development'],
-    highlights: ['Lightweight footprint', 'Easy integration', 'AI-powered analytics'],
+    description: 'Led development of a lightweight, AI-powered Web SDK enabling seamless integration across platforms. Features chat-driven generation of graphs, reports, and pricing visualizations, built with Rollup (UMD) for compatibility, Shadow DOM and CSS Modules for isolated styling, optimized for performance, and deployed via AWS S3 and CloudFront.',
+    tech: ['TypeScript', 'Rollup', 'Shadow DOM', 'AI Integration', 'SDK Development', 'AWS', 'CSS Modules'],
+    highlights: ['Lightweight footprint', 'AI-powered analytics', 'Fast load times'],
     icon: Zap,
     gradient: 'from-primary to-secondary'
   },
   {
-    title: 'Wyzard.ai SaaS Tool',
-    description: 'Comprehensive procurement and subscription management platform with React + Next.js frontend, serving enterprise clients with complex workflows.',
-    tech: ['React', 'Next.js', 'TypeScript', 'SaaS Architecture', 'Enterprise'],
-    highlights: ['Enterprise-grade', 'Complex workflows', 'Scalable architecture'],
+    title: 'Copilot Customer Dashboard',
+    description: 'Developed a comprehensive customer analytics dashboard with React and TypeScript. Enabled users to customize SDKs, manage campaigns, track leads, and visualize data with AI-powered insights. Integrated workflows across email, LinkedIn, and calls, and deployed on Azure with CI/CD pipelines.',
+    tech: ['React', 'TypeScript', 'React Flow', 'Data Visualization', 'API Integration', 'Azure'],
+    highlights: ['Real-time insights', 'Interactive dashboards', 'AI recommendations'],
     icon: Database,
     gradient: 'from-secondary to-accent'
   },
   {
-    title: 'Generative AI Platform',
-    description: 'Enterprise chatbot and synthetic data solutions with React frontend and Python backend, enabling AI-powered business intelligence.',
-    tech: ['React', 'Python', 'AI/ML', 'Enterprise', 'Full-Stack'],
-    highlights: ['AI/ML integration', 'Enterprise solutions', 'Data intelligence'],
+    title: 'B2C SaaS Chatbot',
+    description: 'Developed a real-time, AI-powered B2C chatbot enabling personalized user engagement and support. Implemented WebSocket-based streaming for instant responses, interactive dashboards for monitoring conversations, and AI-generated graphs, reports, and pricing cards. Built with React, Node.js, and Python, integrating NLP, real-time analytics, and cloud deployment for scalability.',
+    tech: ['React', 'Node.js', 'Python', 'WebSocket', 'AI/NLP', 'Data Visualization', 'Cloud Deployment', 'Real-time Analytics'],
+    highlights: ['Real-time engagement', 'AI-powered insights', 'Interactive dashboards', 'Scalable architecture'],
+    icon: Cloud,
+    gradient: 'from-accent to-primary'
+  },
+  {
+    title: 'Wyzard.ai SaaS Tool',
+    description: 'Built a procurement and subscription management platform using React and Next.js, enabling enterprise clients to manage licenses, subscriptions, contracts, and payments efficiently. Integrated interactive data visualizations and a secure document vault.',
+    tech: ['React', 'Next.js', 'TypeScript', 'SaaS Architecture', 'Enterprise'],
+    highlights: ['Enterprise-grade', 'Interactive visualizations', 'Secure workflows'],
+    icon: Database,
+    gradient: 'from-secondary to-accent'
+  },
+  {
+    title: 'Generative AI Solutions',
+    description: 'Implemented AI/ML solutions including enterprise chatbots, synthetic data generation, and compliance tools. Full-stack development with React frontend and Python backend, along with reusable component library creation for scalable deployment.',
+    tech: ['React', 'Python', 'AI/ML', 'Full-Stack', 'Component Library'],
+    highlights: ['AI/ML integration', 'Reusable components', 'Enterprise solutions'],
     icon: Cloud,
     gradient: 'from-accent to-primary'
   },
   {
     title: "People's First App (Reliance JIO)",
-    description: 'HR and Payroll application built with Angular and Node.js, successfully serving over 200,000+ users with complex business logic.',
-    tech: ['Angular', 'Node.js', 'Enterprise Scale', 'HR Solutions', 'Performance'],
-    highlights: ['200K+ users', 'Enterprise scale', 'High performance'],
+    description: 'Developed an enterprise HR and payroll platform serving 200,000+ users. Built with Angular and Node.js, implemented shift planning solutions, attendance, payroll, and HR management, along with a universal UI component library and process automation.',
+    tech: ['Angular', 'Node.js', 'Enterprise Scale', 'HR Solutions', 'Automation'],
+    highlights: ['200K+ users', 'High performance', 'Workflow optimization'],
     icon: Users,
     gradient: 'from-primary to-accent'
   },
   {
-    title: 'HR & Vendor Hiring Solutions',
-    description: 'End-to-end automation platform with universal UI component repository, streamlining hiring processes with modern development practices.',
-    tech: ['Component Library', 'Automation', 'UI/UX', 'Workflow Management'],
+    title: 'Vendor Hiring Solutions',
+    description: 'Created an end-to-end automation platform for hiring, including reusable UI components and workflow optimizations. Streamlined HR processes, reducing recruiter workload by 75%, using React and Node.js for enterprise applications.',
+    tech: ['React', 'Node.js', 'Component Library', 'Automation', 'UI/UX'],
     highlights: ['Process automation', 'Reusable components', 'Workflow optimization'],
     icon: Zap,
     gradient: 'from-secondary to-primary'
-  }
+  },
+ 
 ];
+
 
 export default function Projects() {
   return (
@@ -61,7 +79,7 @@ export default function Projects() {
           </h2>
           <div className="w-24 h-1 bg-gradient-secondary mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Showcasing innovative solutions and technical excellence across various domains
+          A showcase of projects that blend innovation, design, and technical excellence across web, SaaS, and AI domains.
           </p>
         </motion.div>
 

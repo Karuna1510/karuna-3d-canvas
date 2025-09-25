@@ -34,18 +34,15 @@ export default function About() {
             className="space-y-6"
           >
             <h3 className="text-2xl md:text-3xl font-semibold text-primary">
-              Dynamic Software Developer & Frontend Architect
+            Forntend Focused Full-Stack Developer  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-bold">Developer</span> and a little bit of <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-bold">everything</span>
             </h3>
             
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              With 7+ years of experience building scalable applications, I specialize in frontend architecture, 
-              UI/UX design, and solving complex problems with elegant code solutions.
+            <p className="text-md text-muted-foreground leading-relaxed">
+            I am Karuna Guglani , a proactive Full Stack Developer , dedicated to transforming ideas into powerful digital solutions. My work blends creativity and technology to craft seamless, intuitive user experiences that are as visually engaging as they are high-performing.
             </p>
             
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              My expertise spans across modern technologies including React, Next.js, Angular, Node.js, 
-              and cloud platforms like AWS, GCP, and Azure. I'm passionate about creating exceptional 
-              user experiences and building robust, maintainable applications.
+            <p className="text-md text-muted-foreground leading-relaxed">
+            I specialize in building scalable applications and elegant architectures, balancing user needs with business goals. By prioritizing performance, accessibility, and responsiveness, I create solutions that delight users while driving measurable impact.
             </p>
             
             <div className="pt-4">
@@ -58,6 +55,14 @@ export default function About() {
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-secondary rounded-full mr-3"></div>
                   Scalable Web Applications Development
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  Backend Development & API Design
+                </li>
+                <li className="flex items-center">
+                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  Cloud Platforms & Deployment
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>

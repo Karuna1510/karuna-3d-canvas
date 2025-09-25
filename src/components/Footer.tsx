@@ -13,16 +13,14 @@ export default function Footer() {
           className="text-center"
         >
           <div className="flex items-center justify-center space-x-2 text-muted-foreground mb-4">
-            <span>Built with</span>
-            <Heart className="h-4 w-4 text-accent" />
-            <span>and</span>
+           
             <Code className="h-4 w-4 text-primary" />
             <span>by Karuna Guglani</span>
           </div>
           
           <div className="text-sm text-muted-foreground">
             <p>&copy; {new Date().getFullYear()} Karuna Guglani. All rights reserved.</p>
-            <p className="mt-1">Frontend Developer | Software Engineer | UI/UX Enthusiast</p>
+            <p className="mt-1"> Software Engineer | UI/UX Enthusiast</p>
           </div>
           
           {/* Animated decorative elements */}

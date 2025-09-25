@@ -7,7 +7,8 @@ import {
   GitBranch, 
   Laptop,
   Zap,
-  Users
+  Users,
+  TestTube
 } from 'lucide-react';
 
 const skillCategories = [
@@ -42,9 +43,9 @@ const skillCategories = [
     color: 'secondary'
   },
   {
-    title: 'Specializations',
-    icon: Users,
-    skills: ['UI/UX Design', 'Performance Optimization', 'Team Leadership', 'Mentoring'],
+    title: 'Testing Framework',
+    icon: TestTube,
+    skills: ['Jest', 'Cypress', 'React Testing Library'],
     color: 'accent'
   }
 ];
@@ -65,7 +66,7 @@ export default function Skills() {
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit for building modern, scalable applications
+          Tools and technologies used to build scalable, modern applications.
           </p>
         </motion.div>
 

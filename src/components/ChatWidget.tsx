@@ -14,11 +14,11 @@ interface Message {
 const staticReplies: Record<string, string> = {
   'hello': "Hi there! I'm Karuna's assistant. How can I help you today?",
   'hi': "Hello! I'm here to help you learn more about Karuna. What would you like to know?",
-  'experience': "Karuna has 6+ years of experience as a Senior Software Developer, specializing in React, Angular, and full-stack development. Currently working at EXL Service in Gurugram, India.",
-  'skills': "Karuna is proficient in React, Angular, Node.js, TypeScript, JavaScript, Python, AWS, Docker, and many other technologies. Check out the skills section for the complete list!",
+  'experience': "Karuna has 7+ years of experience as a Senior Software Developer, specializing in React, Angular, and full-stack development. Currently contributing remotely to RoundCircle Technologies, a Gurugram-based company.",
+  'skills': "Karuna is proficient in React,TypeScript, JavaScript, Angular, Node.js, , Python, AWS and many other technologies. Check out the skills section for the complete list!",
   'projects': "Karuna has worked on various projects including web applications, e-commerce platforms, and enterprise solutions. You can see featured projects in the portfolio section.",
   'contact': "You can reach Karuna at karunaguglani15@gmail.com or connect on LinkedIn. She's available for remote work opportunities.",
-  'location': "Karuna is based in India and available for remote work globally.",
+  'location': "Karuna is based in Ontario,Canada and available for work in Ontario,Canada and remote work globally.",
   'availability': "Karuna is currently open to new opportunities and collaborations. Feel free to reach out through the contact form below!",
   'education': "Karuna holds a Bachelor of Engineering in Computer Science from Chitkara University (2014-2018).",
   'default': "That's a great question! For specific inquiries, please use the contact form below and Karuna will get back to you personally."

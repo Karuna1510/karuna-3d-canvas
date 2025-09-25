@@ -17,45 +17,38 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            {/* Profile Polaroid */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex justify-center"
-            >
-              <ProfilePolaroid />
-            </motion.div>
-
-            {/* Text Content */}
-            <div className="space-y-6">
-              <motion.h1 
-                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent"
+            {/* Profile Polaroid and Text Content Side by Side */}
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+              {/* Profile Polaroid */}
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.4 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex-shrink-0"
               >
-                Karuna Guglani
-              </motion.h1>
-              
-              <motion.div 
-                className="text-lg md:text-xl lg:text-2xl font-light text-muted-foreground"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                <span className="text-primary font-medium">Frontend Developer</span> | 
-                <span className="text-secondary font-medium"> Software Engineer</span>
+                <ProfilePolaroid />
               </motion.div>
-              
-              <motion.p 
-                className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                7+ years of experience building scalable applications and crafting exceptional user experiences. Passionate about creating beautiful, functional, and user-centered digital solutions.
-              </motion.p>
+
+              {/* Text Content */}
+              <div className="space-y-6 text-center lg:text-left">
+                <motion.h1 
+                  className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1, delay: 0.4 }}
+                >
+Software Developer and Creative Coder
+                </motion.h1>
+                
+                <motion.p 
+                  className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                >
+I design and build digital experiences that feel effortless, scale with ambition, and leave a lasting impression. By blending code and creativity, I turn complex ideas into smooth, interactive solutions that are as functional as they are beautiful.Passionate about LLM-Powered Applications, AI-Driven automation,and futuristic web experiences.
+                </motion.p>
+              </div>
             </div>
             
             <motion.div 
@@ -70,9 +63,12 @@ export default function Hero() {
                 className="text-lg px-8 py-3"
                 asChild
               >
-                <a href="mailto:karunaguglani15@gmail.com">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Get In Touch
+                <a 
+                  href="/FinalResume.pdf" 
+                  download="FinalResume.pdf"
+                >
+                  <ExternalLink className="mr-2 h-5 w-5" />
+                  Resume
                 </a>
               </Button>
               

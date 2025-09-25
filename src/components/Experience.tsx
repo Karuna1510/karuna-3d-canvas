@@ -8,12 +8,20 @@ const experiences = [
     period: '2024 – Present',
     location: 'Remote',
     projects: [
-      'Marketing CoPilot SDK - Lightweight SDK with Rollup, Shadow DOM integration',
-      'Customer dashboards with interactive data visualizations', 
-      'SaaS tool Wyzard.ai for procurement + subscription management',
-      'AI-powered dashboards with React + Next.js frontend'
+      'Marketing CoPilot SDK — Created a lightweight SDK with AI integration, enabling seamless adoption across multiple platforms. Integrated chat features that generate graphs, along with reports and pricing card visualizations.',
+     'Customizable Customer Dashboard — Built dashboards that let users personalize the SDK, add data, define goals, manage leads, and track progress with real-time analytics and interactive visualizations, along with email, LinkedIn, and call integrations.',
+     'LLM-Powered Chat Application — Developed a conversational interface for B2C product discovery, that works as a plug and play SDK for all your SASS queries,enabling natural language search and improved customer engagement.',
+     'Wyzard.ai (SaaS Tool) — Designed and implemented a platform for procurement and subscription management, featuring analytics dashboards, usage insights, and graphical reporting.'
     ],
-    technologies: ['React', 'Next.js', 'TypeScript', 'Rollup', 'Shadow DOM', 'Data Visualization']
+    technologies: [ 'React',
+  'Next.js',
+  'JavaScript',
+  'Node.js',
+  'Data Visualization ',
+  'GraphQL',
+  'Azure',
+  'AWS',
+  'GCP']
   },
   {
     company: 'EXL Service',
@@ -21,12 +29,13 @@ const experiences = [
     period: '2023 – 2024',
     location: 'Gurugram, India',
     projects: [
-      'Generative AI solutions for enterprise clients',
-      'Full-stack applications with React & Python backend',
-      'Reusable UI component library development',
-      'Performance optimization and code quality initiatives'
+      'Generative AI Solutions — Created AI-powered applications for enterprise clients, including synthetic data generation, chatbots, and compliance tools, improving automation and business insights.',
+      'Full-Stack Applications — Built scalable applications with seamless frontend-backend integration, delivering intuitive and high-performing user experiences.',
+      'Interactive Dashboards & Reusable Components — Developed dashboards and reusable components that allowed users to manage workflows, track data, and visualize analytics, reducing development time across projects.',
+      'Performance & Scalability Enhancements — Identified bottlenecks and optimized systems to ensure smooth, reliable, and responsive application performance.',
+      'End-to-End Product Delivery — Led projects from design through deployment, translating complex requirements into functional solutions that met user needs and business objectives.'
     ],
-    technologies: ['React', 'Python', 'AI/ML', 'Component Libraries', 'Performance Optimization']
+    technologies: ['React', 'TypeScript','Python', 'Component Libraries', 'Performance Optimization']
   },
   {
     company: 'JIO Platforms Limited',
@@ -34,12 +43,13 @@ const experiences = [
     period: '2019 – 2023',
     location: 'Mumbai, India',
     projects: [
-      "People's First App - HR/Payroll application serving 200,000+ users",
-      'Universal UI component repository for enterprise applications',
-      'End-to-end vendor hiring application with automated workflows',
-      'HR solutions with complex business logic and integrations'
+      'People’s First App — Led development of a comprehensive HR and payroll application serving 200,000+ users, including features for attendance tracking, payslip access, booking meeting rooms, and managing daily employee activities. Enabled seamless workforce management and improved operational efficiency.',
+      'HR & Workforce Management Solutions — Directed creation of solutions for Reliance Retail, including a COVID-19 shift planning system that reduced planning time by 50% and assignment errors by 30%, and an end-to-end HR management platform for job posting, candidate interviews, and talent acquisition.',
+      'Universal UI Component Repository — Developed a standardized UI component library for enterprise applications, streamlining development and reducing recruiter workload by 75% through automation and reusable components.',
+      'End-to-End Vendor Hiring Application — Built a complete vendor hiring platform with automated workflows, collaborating closely with design teams to ensure consistent, user-friendly interfaces.',
+      'Complex HR Solutions & Integrations — Delivered applications handling complex business logic, data integrations, and enterprise-scale user interactions, improving overall system reliability and user experience.'
     ],
-    technologies: ['Angular', 'Node.js', 'TypeScript', 'Enterprise Architecture', 'UI Libraries']
+    technologies: ['Angular',  'TypeScript','Spring Boot', 'MongoDB', 'Enterprise Architecture', 'UI Libraries']
   }
 ];
 
@@ -63,7 +73,7 @@ export default function Experience() {
           </p>
         </motion.div>
 
-        <div className="relative">
+        <div className="relative">P
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-primary"></div>
           

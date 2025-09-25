@@ -22,7 +22,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Available for Remote Work',
+    value: 'Ontario,Canada',
     href: null
   }
 ];
