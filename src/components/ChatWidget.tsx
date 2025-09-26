@@ -165,7 +165,7 @@ export default function ChatWidget() {
             {/* Header */}
             <div className="bg-gradient-primary p-4 text-white">
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center shrink-0">
                   <Bot className="h-4 w-4" />
                 </div>
                 <div>
@@ -185,7 +185,7 @@ export default function ChatWidget() {
                   className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}
                 >
                   <div className={`flex items-start space-x-2 max-w-[80%] ${message.isUser ? 'flex-row-reverse space-x-reverse' : ''}`}>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
                       message.isUser ? 'bg-primary' : 'bg-secondary'
                     }`}>
                       {message.isUser ? <User className="h-4 w-4 text-white" /> : <Bot className="h-4 w-4 text-white" />}
