@@ -77,9 +77,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    /* Prevent zoom issues */
-    zoom: 1;
-    transform: scale(1);
+    /* Prevent breaking of position: fixed by transforms on body */
+    /* Removed zoom/transform which can create a new containing block */
   }
   
   .font-mono {
@@ -134,5 +133,22 @@
   
   .container-custom {
     @apply mx-auto max-w-7xl;
+  }
+  
+  /* Chat Widget Fixed Positioning - Override any conflicting styles */
+  .chat-widget-button {
+    position: fixed !important;
+    bottom: 24px !important;
+    right: 24px !important;
+    z-index: 99999 !important;
+    pointer-events: auto !important;
+  }
+  
+  .chat-widget-window {
+    position: fixed !important;
+    bottom: 96px !important;
+    right: 24px !important;
+    z-index: 99998 !important;
+    pointer-events: auto !important;
   }
 }

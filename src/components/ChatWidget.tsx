@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, User, Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -33,6 +34,7 @@ const quickQuestions = [
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -51,6 +53,13 @@ export default function ChatWidget() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+
+  // Show chat widget after 2 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
 
   const getReply = (userMessage: string): string => {
@@ -110,11 +119,17 @@ export default function ChatWidget() {
 
   
 
-  return (
+  const chatWidget = (
     <>
       {/* Chat Button */}
       <motion.div
-        className="fixed bottom-6 right-6 z-50"
+        style={{
+          position: 'fixed',
+          bottom: '24px',
+          right: '24px',
+          zIndex: 999999,
+          pointerEvents: 'auto'
+        }}
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.3 }}
@@ -136,7 +151,16 @@ export default function ChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-24 right-6 w-96 h-[500px] bg-background border border-border rounded-lg shadow-2xl z-40 flex flex-col overflow-hidden"
+            style={{
+              position: 'fixed',
+              bottom: '96px',
+              right: '24px',
+              width: '384px',
+              height: '500px',
+              zIndex: 999998,
+              pointerEvents: 'auto'
+            }}
+            className="bg-background border border-border rounded-lg shadow-2xl flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-gradient-primary p-4 text-white">
@@ -213,4 +237,7 @@ export default function ChatWidget() {
       </AnimatePresence>
     </>
   );
+
+  // Use React Portal to render directly to document body
+  return isVisible ? createPortal(chatWidget, document.body) : null;
 }
