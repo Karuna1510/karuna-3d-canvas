@@ -73,6 +73,13 @@
   body {
     @apply bg-background text-foreground overflow-x-hidden;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    /* Ensure consistent rendering across browsers */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    /* Prevent zoom issues */
+    zoom: 1;
+    transform: scale(1);
   }
   
   .font-mono {
@@ -81,6 +88,10 @@
 
   html {
     scroll-behavior: smooth;
+    /* Ensure consistent scaling */
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
   }
 }
 
