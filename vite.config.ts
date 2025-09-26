@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/karuna-3d-canvas/", 
+  base: process.env.NODE_ENV === 'production' ? "/karuna-3d-canvas/" : "/",
   server: {
     host: "::",
     port: 8080,
