@@ -6,7 +6,7 @@ interface ProfilePolaroidProps {
 }
 
 export default function ProfilePolaroid({ 
-  imageUrl = "/portfolio.jpg", 
+  imageUrl = "/karuna-3d-canvas/portfolio.jpg", 
   alt = "Karuna Guglani" 
 }: ProfilePolaroidProps) {
   return (
