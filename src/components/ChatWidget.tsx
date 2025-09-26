@@ -33,6 +33,7 @@ const quickQuestions = [
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -51,6 +52,15 @@ export default function ChatWidget() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  useEffect(() => {
+    // Show chat widget after 3 seconds to be less intrusive
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const getReply = (userMessage: string): string => {
     const message = userMessage.toLowerCase().trim();
@@ -107,11 +117,13 @@ export default function ChatWidget() {
     }
   };
 
+  if (!isVisible) return null;
+
   return (
     <>
       {/* Chat Button */}
       <motion.div
-        className="fixed bottom-6 right-6 z-50"
+        className="fixed bottom-4 right-4 z-50 md:bottom-6 md:right-6"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.3 }}
@@ -133,7 +145,7 @@ export default function ChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-24 right-6 w-96 h-[500px] bg-background border border-border rounded-lg shadow-2xl z-40 flex flex-col overflow-hidden"
+            className="fixed bottom-20 right-4 w-80 h-[400px] md:bottom-24 md:right-6 md:w-96 md:h-[500px] bg-background border border-border rounded-lg shadow-2xl z-40 flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-gradient-primary p-4 text-white">
