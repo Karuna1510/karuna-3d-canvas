@@ -33,7 +33,6 @@ const quickQuestions = [
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -53,14 +52,6 @@ export default function ChatWidget() {
     scrollToBottom();
   }, [messages]);
 
-  useEffect(() => {
-    // Show chat widget after 3 seconds to be less intrusive
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const getReply = (userMessage: string): string => {
     const message = userMessage.toLowerCase().trim();
@@ -117,7 +108,7 @@ export default function ChatWidget() {
     }
   };
 
-  if (!isVisible) return null;
+  
 
   return (
     <>
